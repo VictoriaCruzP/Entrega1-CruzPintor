@@ -1,6 +1,10 @@
 # Proyecto de Victoria Cruz Pintor
 
-# para ingresar y ver los datos:
+# para ingresar a superusuario: /admin
 
-# /mi-template/(nombre)Victoria/(edad)28/(telefono)611150440
+# contraseña: 123 Usuario: admin
+
+# Desde  la pagina principal tenemos el boton 'Inicio' para regresar a la misma
+
+# O el boton 'Template' para ingresar a ver el contenido
 

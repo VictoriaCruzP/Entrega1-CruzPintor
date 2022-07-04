@@ -2,27 +2,26 @@ from django.http import HttpResponse
 from django.template import loader
 from datetime import datetime
 from django.shortcuts import render
-from .models import Edad, Nombre, Telefono
+from proyecto.models import Edad, Nombre, Telefono
 
 
 # Create your views here.
 
 def vista_uno(request):
-    return HttpResponse('<h1>Mi Blog</h1>')
-
+    return render(request, 'index.html')
 def fecha(request):
     fecha_actual = datetime.now()
     return HttpResponse(f'Fecha : {fecha_actual}')
 
-def un_template(request, nombre_admin, edad_admin, telefono_admin):
+def un_template(request):
     
     
-    nombre = Nombre (nombre = nombre_admin)
+    nombre = Nombre (nombre = 'Victoria')
     nombre.save()
-    edad = Edad (edad= edad_admin)
+    edad = Edad (edad= 28)
     edad.save()
-    telefono = Telefono (telefono= telefono_admin)
+    telefono = Telefono (telefono= 611150440)
     telefono.save()
    
-    return render(request, 'index.html', {'lista_objeto': [nombre, edad, telefono]})
+    return render(request, 'mi_template.html', {'lista_objeto': [nombre, edad, telefono]})
 
