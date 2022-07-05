@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Crear Usuario</title>
+{% endblock title  %}
+
+
+{% block texto_header %}
+<h1>
+    Ingresar los Datos
+</h1>
+{% endblock texto_header %}    
+
+{% block despues_del_header %}
+<p>
+    <form action={% url 'crear_usuario' %} method="post">
+        <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit" value="Crear">
+    </form>
+</p>
+{% endblock despues_del_header %}
+

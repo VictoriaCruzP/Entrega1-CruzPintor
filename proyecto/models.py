@@ -1,12 +1,17 @@
 from django.db import models
 
 # Create your models here.
-class Nombre(models.Model):
+class Usuario(models.Model):
     nombre=models.CharField(max_length=100)
-   
-    
-class Edad(models.Model):
     edad=models.IntegerField()
+    telefono=models.IntegerField()
     
-class Telefono(models.Model):
-    telefono=models.IntegerField()      
+    
+class Auto(models.Model):
+    marca=models.CharField(max_length=100)
+    año=models.IntegerField()
+    
+    
+class Localidad(models.Model):
+    provincia=models.CharField(max_length=100)
+    cp=models.IntegerField()      

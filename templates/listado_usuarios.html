@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Listado de Usuarios</title>
+{% endblock title  %}
+
+
+{% block texto_header %}
+<h1>
+    Listado de Usuarios
+</h1>
+{% endblock texto_header %}    
+
+{% block despues_del_header %}
+<p>
+    <a href={% url 'crear_usuario' %}>Crear Usuario</a>
+</p>
+<p>
+    <ul>
+        {% for usuario in listado_usuarios %}
+        <li>{{usuario}}</li>
+        <li>{{auto}}</li>
+        <li>{{localidad}}</li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for auto in listado_usuarios %}
+        <li>{{auto}}</li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for localidad in listado_usuarios %}
+        <li>{{localidad}}</li>
+        {% endfor %}
+    </ul>
+</p>
+{% endblock despues_del_header %}
